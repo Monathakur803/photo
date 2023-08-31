@@ -8,7 +8,8 @@ import "./MainNavigation.css";
 
 
 const MainNavigation =(props) => {
-    return ( <MainHeader>
+    return ( 
+    <MainHeader>
          <h1 className="mainnav-title">
             <Link to="/">Picpot</Link>
          </h1>
@@ -17,7 +18,7 @@ const MainNavigation =(props) => {
          </nav>
     </MainHeader>
          
-    ) ;
+    );
 };
 
 export default MainNavigation;

@@ -14,10 +14,10 @@ const App = () => {
         <Router>
             < MainNavigation />
             <Switch>
-                <Route path="/" exact>
+                <Route path= "/" exact>
                     <Users />
                 </Route>
-                <Route path="/locations/new" exact>
+                <Route path= "/locations/new" exact>
                     <NewLocation />
                 </Route>
                 <Redirect to="/" />
