@@ -13,7 +13,8 @@ const UserItem = (props) => {
                     </div>
                     <div className="usersitem-infor">
                         <h2>{props.name}</h2>
-                        <h3>{props.locationcount}
+                        <h3>
+                            {props.locationcount}
                             {props.locationcount === 1 ? "location" : "locations"}
                         </h3>
                     </div>
