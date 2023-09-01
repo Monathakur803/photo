@@ -1,6 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
+
+import "./NewLocation.css";
 
 const NewLocation =() => {
+    const [newlocation, setNewlocation] = useState ({
+        title:"",
+        desc:"",
+        address:"",
+    });
+    const submitHandler = (event) => {
+        event.preventDefault();
+        console.log("new location page : ", newlocation);
+    };
+    const changeHandler = (event) =>{
+        const inputname =event.target.name;
+        const newValue = event.target.value;
+
+        setNewlocation((previousValue) =>{
+            if (inputname === "newlocationtitle") {
+                return {
+                    title : newValue,
+                    desc: previousValue.desc,
+                    address: previousValue.address,
+                }
+            }
+        })
+    };
     return  (
         <form className="location-form">
             <div className="form-control">
@@ -20,6 +45,7 @@ const NewLocation =() => {
                     Address
                     <input name="newlocationadr" type ="text" required/>
                 </label>
+
             </div>
         </form>
     );
