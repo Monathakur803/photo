@@ -1,25 +1,40 @@
-import React from "react";
-import {NavLink} from "react-router-dom";
+import React, {useContext} from "react";
+import { NavLink } from "react-router-dom";
+
+import { LoginContext } from "../context";
 
 import "./NavLinks.css";
 
-const NavLinks=(props)=>{
+const NavLinks = (props) => {
+    const loggedin=useContext(LoginContext);
+
+
     return (
         <ul className="navlinks">
             <li>
-                <NavLink to ="/" exact>
+                <NavLink  to = "/" exact>
                     Everyone
-                    </NavLink>
+                </NavLink >
             </li>
-            <li>
-                <NavLink to ="/u1/locations">My Locations</NavLink>
+            {loggedin.isLoggedIn && (
+                <li>
+                <NavLink to = "/u1/locations" >  My Locations  </NavLink>
             </li>
-            <li>
-                <NavLink to ="/locations/new">Add Location</NavLink>
-            </li>
-            <li>
-                <NavLink to ="/login">Sign In/Up</NavLink>
-            </li>
+            )}
+            {loggedin.isLoggedIn && (
+              <li>
+                <NavLink to = "/locations/new">  Add Location  </NavLink>
+            </li>  
+            )}
+            {!loggedin.isLoggedIn && (
+               <li>
+                <NavLink to = "/login" >   Sign in/up </NavLink>
+            </li> 
+            )}
+            {loggedin.isLoggedIn && (
+                <button onClick={loggedin.logout}>Log out</button>
+            )}
+     
         </ul>
     );
 };

@@ -17,7 +17,7 @@ const UserLocations = () => {
             id: "loc2",
             title: "Taj Mahal",
             desc: "ताज महल   भारतक आगरा सहरमे स्थित एक समाधिस्थल छी । एकर निर्माण मुगल सम्राट शाहजहाँ, अपन घरवाली मुमताज महलक यादमे करेनाए छल ।[५] ताज महल मुगल वास्तुकलाक उत्कृष्ट नमूना छी । एकर वास्तुकला शैली फारसी, टर्की, भारतीय तथा इस्लामिक वास्तुकलाक घटकसभक अनौठा मिश्रण छी । सन् १९८३ मे, ताजमहल युनेस्को विश्व सम्पदा क्षेत्र बनल ।",
-            pic: "https://resize.indiatvnews.com/en/resize/newbucket/730_-/2019/08/taj-mahal-1522413235-1567083369.jpg",
+            pic: "https://dreamcitytravel.com/wp-content/uploads/2020/08/3.-Taj-Mahal-Location-Image.png",
             address: "Agra",
             userid: "u1",
         },
@@ -28,6 +28,7 @@ const UserLocations = () => {
             pic: "https://qph.cf2.quoracdn.net/main-qimg-8924a2a1094b74f75368149b3babc98c",
             address: "Jatayu Nature Park Rd, Jatayu Junction, Chadayamangalam, Kerala 691534",
             userid: "u2",
+       
         },
     ];
     const userid = useParams().userid;
